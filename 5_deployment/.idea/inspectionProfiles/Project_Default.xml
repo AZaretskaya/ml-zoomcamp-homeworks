@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="rss_reader.rss_reader.get_response" />
+          <option value="rss_reader.rss_reader.extract_data_from_xml" />
+          <option value="rss_reader.rss_reader.print_news" />
+          <option value="rss_reader.rss_reader.print_json" />
+          <option value="pandas_profiling" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
