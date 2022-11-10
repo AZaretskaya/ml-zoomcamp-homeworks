@@ -1,5 +1,7 @@
 # **Energy Efficiency Analysis**
 
+![dataset-cover](images/dataset-cover.png)
+
 This project is a midterm project of the [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) course Cohort 2022. 	
 
 ## Problem description
