@@ -34,17 +34,16 @@ The variables are described below. The details can be found in this [article](ht
 ## Project description
 For this project we trained four models: **Ridge()**, **DecisionTreeRegressor()**, **RandomForestRegressor()** and **XGBoost()**. **RMSE** was used as an evaluation score during the model selection process. Data preparation, EDA, parameters tuning and selection of the final model are made in the Jupyter Notebook file [`notebook.ipynb`](notebook.ipynb). 
 
+The found best model was trained in a Python script [`train.py`](train.py). This script saved the final model and necessary DictVectorizer object into [`model.bin`](model.bin) using **pickle**.
 
-The found best model was trained in a Python script [`train.py`](`train.py`). This script saved the final model and necessary DictVectorizer object into [`model.bin`](`model.bin`) using **pickle**.
+Then we added another Python script [`predict.py`](predict.py) where the final model is loaded and a **Flask** app was created.
 
-Then we added another Python script [`predict.py`](`predict.py`) where the final model is loaded and a **Flask** app was created.
+For testing our Flask's web service a Python script [`predict-test.py`](predict-test.py) is used. It sends a request with test building data to the Flask's web service and gets the prediction. This project has been developed and tested with **Gunicorn** WSGI server.
 
-For testing our Flask's web service a Python script [`predict-test.py`](`predict-test.py`) is used. It sends a request with test building data to the Flask's web service and gets the prediction. This project has been developed and tested with **Gunicorn** WSGI server.
-
-For creating a virtual environment we use **Pipenv**. Two files with dependencies [`Pipfile`](`Pipfile`) and [`Pipfile.lock`](`Pipfile.lock`) were created after installation all needed in this project libraries.
+For creating a virtual environment we use **Pipenv**. Two files with dependencies [`Pipfile`](Pipfile) and [`Pipfile.lock`](Pipfile.lock) were created after installation all needed in this project libraries.
 
 
-Also we added a [`Dockerfile`](`Dockerfile`) with the specifications of the **Docker** container.
+Also we added a [`Dockerfile`](Dockerfile) with the specifications of the **Docker** container.
 
 
 ### Repository structure
@@ -115,7 +114,7 @@ The server will run on localhost using port 9696 and wait for input the house da
 pipenv run python3 predict-test.py
 ```
 As a result you will get the message with sample's prediction:
-```bash
+```
 The predicted heating load for the house 'test_house' is 14.35 kWh/m.
 ```
 
