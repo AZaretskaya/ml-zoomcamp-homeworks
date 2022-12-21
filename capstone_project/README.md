@@ -2,18 +2,8 @@
 
 This project is a capstone project of the [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) course Cohort 2022.	
 
-## Table of contents:
-   
-- [Problem description](#Problem_description)   
-- [Dataset description](#Dataset_description)   
-- [Project description](#Project_description)  
-- [Repository structure](#Repository_structure)  
-- [Virtual environment](#Virtual_environment)  
-- [Model deployment as a web service](#Model_deployment_as_a_web_service)   
-- [Building a Docker container](#Building_a_Docker_container)    
 
-
-## Problem description <a class="anchor" id="Problem_description"></a>
+## Problem description
 In this project we will work with the advertising data of a marketing agency to develop a machine learning algorithm that predicts if a particular user click on an advertisement. 
 
 Prediction of clicking on an advertisement is usefull for: 
@@ -21,7 +11,7 @@ Prediction of clicking on an advertisement is usefull for:
 - users to determine whether an advertisement answered their queries.
 
 
-## Dataset description <a class="anchor" id="Importing"></a>
+## Dataset description
 We use the Kaggle's [Advertisement - Click on Ad dataset](https://www.kaggle.com/datasets/gabrielsantello/advertisement-click-on-ad). 
 
 The dataset contains 1000 samples and 10 features:
@@ -39,7 +29,7 @@ The dataset contains 1000 samples and 10 features:
 This is a binary classification problem, where we have to predict 'Clicked on Ad' variable which is 1 if a user clicks on an advertisement and 0 if a user didn't click on an advertisement. 
 
 
-## Project description <a class="anchor" id="Project_description"></a>
+## Project description
 For this project we trained the following models: LogisticRegression(), RandomForestClasiifier() and XGBoost(). AUC metric was used as an evaluation score during the model selection process. Data preparation, EDA, parameters tuning and selection of the final model are made in the Jupyter Notebook file [notebook.ipynb](notebook.ipynb). 
 
 The found best model was trained in a Python script [train.py](train.py). This script saved the final model and necessary DictVectorizer object into [model.bin](model.bin) using **pickle**.
@@ -53,7 +43,7 @@ For creating a virtual environment we use **Pipenv**. Two files with dependencie
 Also we added a [Dockerfile](Dockerfile) with the specifications of the **Docker** container.
 
 
-## Repository structure <a class="anchor" id="Repository_structure"></a>
+## Repository structure
 - [README.md](README.md): the current file.
 - [images](images): folder with images for README.md
 - [notebook.ipynb](notebook.ipynb): a Jupyter Notebook with Data preparation, Exploratory Data Analysis, Model selection process and Parameter tuning.
@@ -66,8 +56,7 @@ Also we added a [Dockerfile](Dockerfile) with the specifications of the **Docker
 - [Dockerfile](Dockerfile): a Docker file with instructions for the containerizing.
 
 
-## Virtual environment <a class="anchor" id="Virtual_environment"></a>
-
+## Virtual environment
 Pipenv is used to create a Python virtual environment for this project.
 
 To install Pipenv:
@@ -88,8 +77,7 @@ pipenv shell
 ```
 
 
-## Model deployment as a web service <a class="anchor" id="Model_deployment_as_a_web_service"></a>
-
+## Model deployment as a web service
 4. Train the final model:
 ```bash
 python3 train.py
@@ -135,7 +123,7 @@ If you want to make predictions on other users, change 'user' variable in [predi
 exit
 ```
 
-## Building a Docker container <a class="anchor" id="Building_a_Docker_container"></a>
+## Building a Docker container
 A Dockerfile with specifications for building a Docker image is provided.
 
 To install Docker follow [Docker Engine installation](https://docs.docker.com/engine/install/).
